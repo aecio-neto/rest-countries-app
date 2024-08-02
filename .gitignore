@@ -10,6 +10,7 @@
 
 # production
 /build
+/frontendmentor
 
 # misc
 .DS_Store

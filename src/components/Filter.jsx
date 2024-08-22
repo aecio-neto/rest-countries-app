@@ -1,8 +1,8 @@
 export function Filter({ filter, handleFilter }) {
   return (
-    <div className="flex m-4 p-3 w-48 text-sm shadow-lg bg-light-gray dark:bg-dark-blue rounded-md">
+    <div className="flex w-48 p-3 items-center text-sm shadow-md bg-light-gray dark:bg-dark-blue rounded-md">
       <select
-        className="w-full bg-light-gray dark:bg-dark-blue focus:outline-none"
+        className="w-full bg-transparent focus:outline-none"
         name="select"
         id="coutry-select"
         autoFocus={false}

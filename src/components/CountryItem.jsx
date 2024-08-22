@@ -4,17 +4,18 @@ export function CountryItem({ country }) {
     capital,
     continents,
     population,
-    flags: { png: flagUrl, alt: alt },
+    flags: { png: flagUrl, alt },
   } = country;
 
-  //  const {capital} = countries
   return (
-    <div className="p-4 text-md mb-4 bg-dark-blue rounded-md">
-      <img className="mb-4"src={flagUrl} alt={alt} />
-      <h3 className="font-bold text-lg py-2">Name: {countryName}</h3>
-      <p>Region: {continents}</p>
-      <p>Population: {population.toFixed(2)} hab</p>
-      <p>Capital: {capital}</p>
-    </div>
+    <a href="#" className="cursor-pointer">
+      <div className="md:max-w-80 p-4 pb-10 text-md my-4 font-light shadow-md bg-white dark:bg-dark-blue rounded-md">
+        <img src={flagUrl} alt={alt} />
+        <h3 className="font-bold text-lg py-4">Name: {countryName}</h3>
+          <p>Region: {continents}</p>
+          <p>Population: {population.toLocaleString('en-US')}</p>
+          <p>Capital: {capital}</p>
+      </div>
+    </a>
   )
 }

@@ -67,14 +67,16 @@ export function CoutriesFeed() {
   }, [query, filter])
 
   return (
-    <main className="bg-very-light-gray pb-44 dark:bg-very-dark-blue dark:text-white">
-      <SearchBar
-        handleSearch={handleSearch}
-        query={query}
-        setQuery={setQuery}
-      />
-      <Filter filter={filter} handleFilter={handleFilter} />
-      <section className="p-4 min-h-96">
+    <main className="p-8 bg-very-light-gray dark:bg-very-dark-blue dark:text-white">
+      <div className="md:flex justify-between items-center">
+        <SearchBar
+          handleSearch={handleSearch}
+          query={query}
+          setQuery={setQuery}
+        />
+        <Filter filter={filter} handleFilter={handleFilter} />
+      </div>
+      <section className="md:flex flex-wrap justify-between justify-items-center">
         {countriesData.length > 0 ? (
           countriesData.map((country, index) => (
             <CountryItem key={index} country={country} />

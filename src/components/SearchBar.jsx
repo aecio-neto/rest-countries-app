@@ -1,14 +1,6 @@
 import { useState } from "react"
 
-export function SearchBar() {
-  const [query, setQuery] = useState("")
-
-  function handleSearch(event) {
-    event.preventDefault()
-    console.log("Query:", query)
-    setQuery("")
-  }
-
+export function SearchBar({ handleSearch, query, setQuery }) {
   return (
     <form
       className="p-4 bg-very-light-gray dark:bg-very-dark-blue dark:text-white"

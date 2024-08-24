@@ -41,17 +41,24 @@ This screenshot shows the homepage with a list of countries, the search and filt
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/rest-countries-api-solution-url)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github](https://www.frontendmentor.io/solutions/rest-countries-api-solution-url)
+- Live Site URL: [Netlify](https://my-rest-countries-app.netlify.app/)
 
 ## My process
 
-I show up on time.
-I do my prayers.
-I do the work.
-One thing at a time.
-Next day, I repeat.
+- I show up on time.
+- I do my prayers.
+- I do the work.
+- One thing at a time.
+- Next day, I repeat.
+
 The process is about showing up daily and doing the work, over and over again.
+
+I also keep a .md file that I think the problem, keep to-dos organized. It's a VSCode extension that helps me to keep everything in it's place. 
+#### Notes - VSCode Extension:
+
+![Screenshot](./public/images/my-process.png)
+
 
 ### Built with
 
@@ -117,7 +124,5 @@ Keep doing my thing. Keep beating resistence.
 ## Acknowledgments
 
 Huge thanks to [Steven Pressfield](https://stevenpressfield.com/) for writing _The War of Art_, which inspired me to push through resistance and keep creating, and to [Prof. Lúcia Helena](https://www.youtube.com/@NovaAcropole) for her philosophy teachings that continuously guide my thinking and approach to learning.
-
-```
 
 ```

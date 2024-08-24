@@ -3,7 +3,7 @@ import { SearchBar } from "./SearchBar"
 import { Filter } from "./Filter"
 import { CountryItem } from "./CountryItem"
 
-export function CoutriesFeed() {
+export function CoutriesFeed({ navigate }) {
   const [query, setQuery] = useState("")
   const [countriesData, setCountriesData] = useState([])
   const [filter, setFilter] = useState("All")
@@ -79,7 +79,7 @@ export function CoutriesFeed() {
       <section className="md:flex flex-wrap justify-between justify-items-center">
         {countriesData.length > 0 ? (
           countriesData.map((country, index) => (
-            <CountryItem key={index} country={country} />
+            <CountryItem key={index} country={country} navigate={navigate} />
           ))
         ) : (
           <p>No countries found. Please, enter a country name to search.</p>

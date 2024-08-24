@@ -17,7 +17,6 @@ export function CoutriesFeed({ navigate }) {
   function handleFilter(e) {
     const newFilter = e.target.value
     setFilter(newFilter)
-    console.log(newFilter)
   }
 
   useEffect(() => {

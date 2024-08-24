@@ -1,70 +1,123 @@
-# Getting Started with Create React App
+Here’s the README content formatted as a Markdown file:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Frontend Mentor - REST Countries API Challenge
 
-## Available Scripts
+This is a solution to the [REST Countries API Challenge](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). This project demonstrates skills in building a responsive web application using React, including handling APIs, managing state, and implementing a theme switcher.
 
-In the project directory, you can run:
+## Table of contents
 
-### `npm start`
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Overview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### The challenge
 
-### `npm test`
+Users should be able to:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- See all countries from the API on the homepage
+- Search for a country using an `input` field
+- Filter countries by region
+- Click on a country to see more detailed information on a separate page
+- Click through to the border countries on the detail page _(I need to work on that)_
+- Toggle the color scheme between light and dark mode
 
-### `npm run build`
+### Screenshot
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Screenshot](./public/images/desktop-view.png)
+![Screenshot](./public/images/details-page.png)
+![Screenshot](./public/images/mobile-design.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This screenshot shows the homepage with a list of countries, the search and filter options, and an example of the detail page for a selected country.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Links
 
-### `npm run eject`
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/rest-countries-api-solution-url)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## My process
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+I show up on time.
+I do my prayers.
+I do the work.
+One thing at a time.
+Next day, I repeat.
+The process is about showing up daily and doing the work, over and over again.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Built with
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [Tailwind CSS](https://tailwindcss.com/) - For styling
+- [REST Countries API](https://restcountries.com/) - For fetching country data
+- [React Router](https://reactrouter.com/) - For routing between pages
 
-## Learn More
+### What I'm really learning and training
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The importance of sitting down and do my thing: study, code, repeat. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+*The programming thing?* I got hands-on experience with handling API requests, setting up a React routing system, and solving bugs. I ended up writing some spaghetti code, but you know what? It works!
+The code isn't perfect, but today I'm better than yesterday.
 
-### Code Splitting
+**Handling API calls and managing state:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```javascript
+useEffect(() => {
+  async function fetchCountry() {
+    try {
+      const response = await fetch(
+        `https://restcountries.com/v3.1/name/${countryName}`
+      )
+      const data = await response.json()
+      setCountry(data[0])
+    } catch (error) {
+      console.log("Error fetching country data:", error)
+    }
+  }
+  fetchCountry()
+}, [countryName])
+```
 
-### Analyzing the Bundle Size
+**Implementing dark/light mode with Tailwind CSS:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```javascript
+<button onClick={toggleTheme} className="bg-white dark:bg-dark-blue">
+  Toggle Theme
+</button>
+```
 
-### Making a Progressive Web App
+### Continued development
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Keep doing my thing. Keep beating resistence.
 
-### Advanced Configuration
+### Useful resources
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs) - The official Tailwind CSS documentation was essential in quickly setting up and customizing the app's design.
+- [React Router Documentation](https://reactrouter.com/docs) - Helped me understand how to manage navigation and routing between the country list and detail pages.
 
-### Deployment
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Website - [Personal Website](https://www.frontendmentor.io/profile/aecio-neto)
+- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/aecio-neto)
+- GitHub - [@yourusername](https://github.com/aecio-neto)
+- Linkedin - [@yourusername](https://www.Linkedin.com/in/aecio-neto)
 
-### `npm run build` fails to minify
+## Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Huge thanks to [Steven Pressfield](https://stevenpressfield.com/) for writing _The War of Art_, which inspired me to push through resistance and keep creating, and to [Prof. Lúcia Helena](https://www.youtube.com/@NovaAcropole) for her philosophy teachings that continuously guide my thinking and approach to learning.
+
+```
+
+```

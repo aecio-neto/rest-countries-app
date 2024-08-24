@@ -9,7 +9,7 @@ export function SearchBar({ handleSearch, query, setQuery }) {
     >
       <div className="flex pl-4 items-center bg-very-light-gray dark:bg-dark-blue dark:text-white rounded-md">
         <button type="submit" onClick={handleSearch}>
-          <ion-icon name="search"></ion-icon>
+          <ion-icon name="search" alt="search icon"></ion-icon>
         </button>
         <input
           className="p-3 w-full bg-transparent dark:text-white focus:outline-none font-light text-sm"

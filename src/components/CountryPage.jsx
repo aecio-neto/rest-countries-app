@@ -63,7 +63,7 @@ export default function CountryPage({ countryName, navigate }) {
   return (
     <>
       <Header />
-      <main className="p-8 text-dark bg-very-light-gray dark:bg-very-dark-blue min-h-screen">
+      <section className="p-8 text-dark bg-very-light-gray dark:bg-very-dark-blue min-h-screen">
         <button
           onClick={() => navigate("/")}
           className="bg-white dark:bg-dark-blue dark:text-white p-2 px-6 my-8 rounded shadow-md"
@@ -120,7 +120,7 @@ export default function CountryPage({ countryName, navigate }) {
             </ul>
           </div>
         </div>
-      </main>
+      </section>
     </>
   )
 }

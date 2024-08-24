@@ -52,6 +52,8 @@ export default function CountryPage({ countryName, navigate }) {
     borders: borderCountries,
   } = country
 
+  console.log(alt)
+
   const nativeNames = Object.values(nativeName).map(n => n.common)
   const currencyInfo = Object.entries(currencies).map(
     ([code, { name }]) => `${capitalizeWords(name)} (${code})`
@@ -69,7 +71,7 @@ export default function CountryPage({ countryName, navigate }) {
           ← Back
         </button>
         <div className="md:flex pb-10 text-md my-4 font-light bg-transparent">
-          <img className="md:w-3/5" src={flagUrl} alt={alt} />
+          <img className="md:w-3/5" src={flagUrl} alt={alt ? alt : countryName + " flag"} />
           <div className="md:m-10 md:px-16 dark:text-white">
             <h3 className="font-bold text-lg py-4">{commonName}</h3>
             <div className="md:flex md:space-x-16 justify-between">

@@ -19,7 +19,7 @@ export function ThemeToggle() {
       className="border-none text-sm cursor-pointer flex items-center"
       onClick={toggleDarkMode}
     >
-      <ion-icon name={isDarkMode ? "sunny-outline" : "moon-outline"}></ion-icon>
+      <ion-icon name={isDarkMode ? "sunny-outline" : "moon-outline"} alt={isDarkMode ? "moon icon" : "sunny icon"}></ion-icon>
       <span className="pl-2">{isDarkMode ? "Light Mode" : "Dark Mode"}</span>
     </button>
   )
